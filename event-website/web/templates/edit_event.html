@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Редактировать событие</title>
+    <link rel="stylesheet" type="text/css" href="/static/css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Редактировать событие</h1>
+        <form id="eventForm" action="/edit/{{.ID}}" method="post">
+            <input type="hidden" name="id" value="{{.ID}}">
+            <label for="title">Тема:</label>
+            <input type="text" id="title" name="title" value="{{.Title}}" required>
+            <br>
+            <label for="description">Описание:</label>
+            <textarea id="description" name="description" required>{{.Description}}</textarea>
+            <br>
+            <label for="category">Категория:</label>
+            <select id="category" name="category" required>
+                <option value="Олимпиады">Олимпиада</option>
+                <option value="Конкурсы">Конкурс</option>
+                <option value="Семинары">Секция</option>
+                <option value="Семинары">Семинар</option>
+                <option value="Семинары">Праздник</option>
+                <option value="Семинары">Массовое мероприятие</option>
+                <option value="Семинары">Выставка</option>
+            </select>
+            <br>
+            <button type="submit" class="button">Сохранить изменения</button>
+        </form>
+        <a class="button" href="/home">Назад</a>
+    </div>
+    <script src="/static/js/scripts.js"></script>
+</body>
+</html>

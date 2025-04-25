@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Список событий</title>
+    <style>
+        .auth-buttons {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            padding: 15px;
+            border-radius: 8px;
+        }
+
+        .auth-buttons a {
+            text-decoration: none;
+            color:#000000;
+            margin-left: 15px;
+            padding: 12px 24px;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+            background-color: hsl(177, 64%, 42%);
+        }
+
+        .auth-buttons a:hover {
+            background-color: hsl(177, 86%, 20%);
+        }
+    </style>
+    <link rel="stylesheet" type="text/css" href="/static/css/styles.css">
+</head>
+<body>
+    <div class="auth-buttons">
+        <a class="auth-buttons a" href="/">Главная</a>
+    </div>
+    <div class="container">
+        <h1>События</h1>
+        <input type="text" id="searchInput" placeholder="Поиск по событиям..." onkeyup="searchEvents()">
+        <ul class="event-list" id="eventList">
+            {{range .}}
+                <li class="event-item" id="event-{{.ID}}">
+                    <strong>{{.Title}}</strong>   
+                    <p></p>
+                    {{.Description}}
+                    <p></p>
+                </li>
+            {{end}}
+        </ul>
+    </div>
+    <!-- <footer>
+        <h1>Ponomarev 9P</h1>
+    </footer> -->
+</body>
+</html>

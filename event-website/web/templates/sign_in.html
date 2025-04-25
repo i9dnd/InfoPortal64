@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Регистрация и Вход</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(to right, #d2f7cd,  #6cf8ea);
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+
+        .container {
+            width: 110%;
+            max-width: 800px;
+            margin: 100px auto;
+            padding: 40px;
+            background: rgb(255, 255, 255);
+            border-radius: 10px;
+            box-shadow: 0 4p4x 20px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s;
+        }
+
+        .container:hover {
+            transform: scale(1.02);
+        }
+
+        h1 {
+            text-align: center;
+            color: #000000;
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        input[type="text"],
+        input[type="password"],
+        select {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            border: 2px solid  #35e743;
+            border-radius: 5px;
+            box-sizing: border-box;
+            transition: border-color 0.3s;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 12px 20px;
+            margin: 10px 0;
+            background: hsl(184, 73%, 41%);
+            color: rgb(0, 0, 0);
+            text-decoration: none;
+            border-radius: 5px;
+            border: none;
+            cursor: pointer;
+            transition: background 0.3s, transform 0.2s;
+        }
+
+        .button:hover {
+            background: #b5f7ad;
+            transform: translateY(-2px);
+        }
+
+        .delete {
+            background-color:hsl(184, 73%, 41%);;
+        }
+
+        .delete:hover {
+            background-color:  #b5f7ad;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Регистрация</h2>
+        <form id="registrationForm" action="/register" method="POST">
+            <div class="form-group">
+                <label for="username">Имя пользователя</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Пароль</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <div class="form-group">
+                <label for="role">Выберите роль</label>
+                <select id="role" name="role" required>
+                    <option value="student">Ученик</option>
+                    <option value="teacher">Учитель</option>
+                </select>
+            </div>
+            <button class="button" type="submit">Зарегистрироваться</button>
+        </form>
+        <a class="button a" href="/">Назад</a>
+    </div>
+</body>
+</html>

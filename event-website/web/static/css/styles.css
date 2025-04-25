@@ -1,0 +1,120 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to right, #d2f7cd,  #6cf8ea);
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 120%;
+    max-width: 850px;
+    margin: 20px auto;
+    padding: 90px;
+    background: rgb(255, 255, 255);
+    border-radius: 10px;
+    box-shadow: 0 4p4x 20px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s;
+}
+
+.auth {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+.auth-buttons a {
+    text-decoration: none;
+    color:#000000;
+    margin-left: 15px;
+    padding: 12px 24px;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+    
+}
+
+.auth-buttons a:hover {
+    background-color: hsl(177, 86%, 20%);
+}
+
+.container:hover {
+    transform: scale(1.02);
+}
+
+h1 {
+    text-align: center;
+    color: #000000;
+    margin-bottom: 20px;
+}
+
+input[type="text"],
+textarea,
+select {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 2px solid  #35e743;
+    border-radius: 5px;
+    box-sizing: border-box;
+    transition: border-color 0.3s;
+}
+
+input[type="text"]:focus,
+textarea:focus,
+select:focus {
+    border-color: #35e743;
+    outline: none;
+}
+
+.button {
+    display: inline-block;
+    padding: 12px 20px;
+    margin: 10px 0;
+    background: #e1ffdd;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.button:hover {
+    background: #b5f7ad;
+    transform: translateY(-2px);
+}
+
+.event-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.event-item {
+    padding: 15px;
+    border: 1px solid #84f051;
+    margin: 10px 0;
+    border-radius: 5px;
+    background: #9cf3ea;
+    position: relative;
+    transition: background 0.3s;
+}
+
+.event-item:hover {
+    background: #73ebdf;
+}
+
+.event-item strong {
+    display: block;
+    font-size: 1.2em;
+    color: #000000;
+}
+
+.delete {
+    background-color:#e1ffdd;
+}
+
+.delete:hover {
+    background-color:  #b5f7ad;
+}
